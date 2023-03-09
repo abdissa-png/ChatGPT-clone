@@ -1,4 +1,4 @@
-const axios = require("axios");
+import * as axios from "axios";
 let bot = "assets/bot.svg";
 let user = "assets/user.svg";
 const form = document.querySelector('form');
@@ -73,7 +73,7 @@ const handleSubmit = async(e) => {
 
     loader(messageDiv);
 
-    const response = await axios.post('https://gptclone-2zgb.onrender.com', { prompt: data.get("prompt") }, {
+    const response = await post('https://gptclone-2zgb.onrender.com', { prompt: data.get("prompt") }, {
             headers: {
                 'content-type': 'application/json'
             }
