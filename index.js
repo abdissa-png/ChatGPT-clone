@@ -1,3 +1,4 @@
+const axios = require("axios");
 let bot = "assets/bot.svg";
 let user = "assets/user.svg";
 const form = document.querySelector('form');
@@ -72,7 +73,13 @@ const handleSubmit = async(e) => {
 
     loader(messageDiv);
 
-    const response = await fetch('https://gptclone-2zgb.onrender.com', {
+    const response = await axios.post('https://gptclone-2zgb.onrender.com', { prompt: data.get("prompt") } {
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+        /*
+     fetch('https://gptclone-2zgb.onrender.com', {
         method: 'POST',
         headers: {
             "Content-type": "application/json"
@@ -81,6 +88,7 @@ const handleSubmit = async(e) => {
             prompt: data.get("prompt")
         })
     })
+    */
 
     clearInterval(loadInterval);
     messageDiv.innerHTML = '';
