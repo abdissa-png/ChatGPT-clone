@@ -76,7 +76,7 @@ const handleSubmit = async(e) => {
         method: 'POST',
         referrerPolicy: "no-referrer-when-downgrade",
         headers: {
-            "Content-type": "application/json"
+            "Content-Type": "application/json"
         },
         body: JSON.stringify({
             prompt: data.get("prompt")
