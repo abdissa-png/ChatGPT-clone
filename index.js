@@ -72,7 +72,7 @@ const handleSubmit = async(e) => {
 
     loader(messageDiv);
 
-    const response = await fetch('http://localhost:5000', {
+    const response = await fetch('https://gptclone-2zgb.onrender.com', {
         method: 'POST',
         headers: {
             "Content-type": "application/json"
