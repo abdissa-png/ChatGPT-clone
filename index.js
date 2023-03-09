@@ -73,7 +73,7 @@ const handleSubmit = async(e) => {
 
     loader(messageDiv);
 
-    const response = await post('https://gptclone-2zgb.onrender.com', { prompt: data.get("prompt") }, {
+    const response = await axios.post('https://gptclone-2zgb.onrender.com', { prompt: data.get("prompt") }, {
             headers: {
                 'content-type': 'application/json'
             }
