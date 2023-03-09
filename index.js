@@ -74,7 +74,6 @@ const handleSubmit = async(e) => {
 
     const response = await fetch('https://gptclone-2zgb.onrender.com', {
         method: 'POST',
-        referrerPolicy: "no-referrer-when-downgrade",
         headers: {
             "Content-Type": "application/json"
         },
